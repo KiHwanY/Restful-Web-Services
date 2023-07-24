@@ -1,10 +1,9 @@
 package com.example.restfulwebservice.user;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Past;
@@ -14,20 +13,12 @@ import java.util.Date;
 // @JsonIgnore  // 필드에 노출이 안됨
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 //@JsonIgnoreProperties(value = {"password","ssn"}) // @JsonIgnore를 클래스 블록 처리
-//@JsonFilter("UserInfo")
-public class User {
-
-    private Integer id;
-    @Size(min = 2, message = "Name은 2글자 이상 입력해 주세요.")
-    private String name;
-    @Past
-    private Date joinDate;
-
-    private String password;
-
-    private String ssn;
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@JsonFilter("UserInfoV2")
+public class UserV2 extends User {
+    private String grade; // 등급
 
 
 }
