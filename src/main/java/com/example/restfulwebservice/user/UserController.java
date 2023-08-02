@@ -1,5 +1,7 @@
 package com.example.restfulwebservice.user;
 
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,8 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
 public class UserController {
+
+
     private UserDaoService service;
 
 
@@ -72,4 +76,5 @@ public class UserController {
         service.putMyid(id,user);
         return user;
     }
+
 }

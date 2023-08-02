@@ -28,7 +28,7 @@ public class SwaggerConfig {
             "http://www.joneconsulting.co.kr","drg2524@joneconsulting.co.kr");
 
     private static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Awesom API Title",
-            "My User management RESt API service", "1.0","urn:tos",
+            "My User management REST API service", "1.0","urn:tos",
             DEFAULT_CONTACT, "Apache 2.0","http://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>());
 
     //Arrays.asList = 배열 형태의 데이터 값을 리스트로 바꿔준다.

@@ -89,5 +89,5 @@ public class UserJpaController {
         return ResponseEntity.created(location).build();
     }
 
- 
+
 }
